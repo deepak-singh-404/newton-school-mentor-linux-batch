@@ -1,0 +1,62 @@
+
+GIT (VERSION CONTROL)
+
+Maintain different version of your code.
+
+Facebook:
+2006
+
+version
+v4.5 Messenger
+v4.6
+
+master
+uat
+dev
+
+commit ==== version
+
+system get crashed.
+
+
+github  (cloud) SCM
+
+
+git
+1- Download git on your machine.
+2- Push your code to github
+   2.1 Create account on git hub
+   2.2 Repository is as same as folder
+   2.3 Try to create different repository for different project.
+   2.4 Repository (Public or Private)
+
+
+Share a folder to you(contain any document)
+
+i will upload to google drive => and share url to you
+
+if you to share the code.
+you will push code to github => and share the repo url.
+
+the next person will clone the repo.
+
+Scenarion
+1- Designed one project but that is working on my local machine.
+2- Distribute this to your 5 friend.
+
+
+Ans:
+1- Create a new repo on your github.
+2- Push code to the newly create repo.
+3- Make sure the git repo is public.
+4- Share the repo url.
+
+
+Profile => Repositories => new => repo name => public/privare => create
+
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/deepak-singh-moglix/newton-school-mentor-linux-batch.git
+git push -u origin main
