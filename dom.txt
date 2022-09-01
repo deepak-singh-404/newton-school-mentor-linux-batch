@@ -1,0 +1,53 @@
+DOM  Document Object Model
+
+why DOM?
+
+Javascript
+
+1980
+
+static website ===> make it dynamic 
+ 
+vs
+
+dynamic website
+
+
+javascript came into picture
+
+purely run in broswer
+
+
+HTML CSS ==> DOM ===>  BROWSER FOR RENDERING
+
+
+HTML CSS DOM ==> DYNAMIC WEB PAGE
+
+
+React  Facebook
+Angular  Google
+View
+
+
+TREE STRUCTRE
+
+var h1 = Document.querySelector("h1")
+h1.innerText = "Deepak"
+
+What is DOM?
+
+Document Object Model
+
+TO make website dynamic javascript interact to DOM and change accordingly
+
+it follow tree STRUCTRE
+
+document.getElementByTagName('div')
+
+document.getElementByClassName('style-1')
+
+document.getElementById('style-2')
+
+
+2020 jan
+

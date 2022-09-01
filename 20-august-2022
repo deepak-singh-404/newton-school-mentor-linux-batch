@@ -1,0 +1,85 @@
+FRONT END DEVELOPMENT (FED)
+ Presentation/End Result/View
+ HTML, CSS, DOM(exposure), any ui framework/library
+ Reactjs/Angular/View
+
+BACK END DEVELOPMENT (BED)
+ Server
+ Database(MYSQL, NOSQL)
+ 
+
+FULL STACK ENGG./DEVELOPER (FSD)
+ Devops
+
+
+Shirt/paint
+ 
+HTML
+ 2 hr
+ bought some pain clothes
+
+CSS
+  border
+  padding
+  margin
+  color
+  backgroundColor
+  size
+  font-family
+  justify-content 
+  text-align
+  display
+  float
+  you gave that cloth to tailor
+  Flexbox
+  Grid system
+  media query
+
+
+Css framework
+any shop => you bough readymade clothes(Levie jeans and all)
+
+Bootstrap
+Material ui
+tailwind CSS
+
+
+
+Javascript
+0- how to take input/print?
+1- How to declare variable?
+2- What are scopes?
+3- How to declare function/invoke/function with arguments
+4- Operation
+5- loops
+
+
+
+1- Declare variable
+
+===============
+Java is strong typed language
+ Whenever we declare varible, we have to mention data typed
+
+
+Javascript is loosely typed
+let, var, const
+
+var a = 10
+var a = "10"
+var a = "papa"
+its datetype get updated in the run time.
+You dont have to mention datatype of varibale, at the time varible initialize.
+
+
+
+0- 
+Java
+
+input  ===> import Scanner from util
+output ===> System.out.print()
+
+Javascript
+
+input  ===> var inputData = prompt()
+output ====> console.log("PAPA")
