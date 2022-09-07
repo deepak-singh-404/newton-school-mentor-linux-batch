@@ -71,9 +71,19 @@ let data = arr.find((e)=>{
 //findIndex
 //return the index of the element and if not present it will return -1
 
-const index = arr.findIndex((e)=>{
-    return e == 100
+const index = arr.findIndex(function(e){
+    if(e == 3){
+        return e;
+    }
 })
+
+console.log(index)
+
+const index2 = arr.indexOf(3)
+
+console.log(index2)
+
+
 
 // console.log(index)
 
@@ -85,3 +95,15 @@ let mappedData = arr.map((e)=>{
 
 
 console.log(mappedData)
+
+
+
+let arr2 = [1,2,3]
+
+arr2.unshift(0)
+
+console.log(arr2)
+
+
+
+//talks about git
