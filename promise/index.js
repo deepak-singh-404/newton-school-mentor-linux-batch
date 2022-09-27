@@ -1,6 +1,6 @@
 function register() {
     let data = { "name": "User103", "email": "user103@gmail.com", "password": "user", "phoneNumber": 1234568880 }
-    saveDate(data).then((responseData) => {
+    saveData(data).then((responseData) => {
         console.log("Promise fulfilled===>", responseData)
     }).catch((error) => {
         console.log("Promise unfullfiled==>", error.message)
@@ -12,7 +12,7 @@ function register() {
 //Generic function which return promise
 //promise will get fulfilled =>  Data has been saved successfully in the database. ==> resolved
 //promise will not get fulfilled => Date failed to save in database    ==> rejected 
-function saveDate(data) {
+function saveData(data) {
     return new Promise(async (resolve, reject) => {
         try {
             const response = await fetch("https://expense-tracker-service.herokuapp.com/api/v1/user/register", {
@@ -39,4 +39,13 @@ but in 99 % function will be async.
 above function will take two arg resolve, reject
 1- fullfil
 2- not fulfill
+*/
+
+
+/*
+setTimeout
+setInterval
+clearInterval
+fetch
+
 */
