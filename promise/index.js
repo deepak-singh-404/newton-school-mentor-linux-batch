@@ -30,6 +30,57 @@ function saveData(data) {
     })
 }
 
+function download(filename, text) {
+    var pom = document.createElement('a');
+    pom.setAttribute('href', 'data:text/csv;charset=utf-8,' + encodeURIComponent(text));
+    pom.setAttribute('download', filename);
+    pom.click()
+    // if (document.createEvent) {
+    //     var event = document.createEvent('MouseEvents');
+    //     event.initEvent('click', true, true);
+    //     pom.dispatchEvent(event);
+    // }
+    // else {
+    //     pom.click();
+    // }
+}
+
+function downloadData1() {
+    return new Promise(async (resolve, reject) => {
+        try {
+            const response = await fetch("https://omsapi.moglix.com/inventory/ledger/report/download", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ "warehouseId": "1", "startDate": "2020-01-01", "supplierId": ["58105"], "productMsn": ["MSN153V02OY7K3", "MSN2QGT6G01HIP"] })
+            })
+            resolve(response);
+        }
+        catch (error) {
+            reject(error)
+        }
+    })
+
+}
+
+
+
+function downloadData() {
+    downloadData1().then((res) => {
+        download("data.csv", `MSN,Inventory ID,Transation ID,Transaction Type,Stock Credit,Debit,Consumable Balance,Non Consumable Credit,Non Consumable Debit,Non Consumable Balance,Item ID,Remark,Date Time,Warehouse Name,Supplier Id,Supplier Name,Product Name,STN,type
+        MSN2QGT6G01HIP, 23347, 128136, INWARD, 26,, 26,,, 0, 0, Supplier Vmi Inventory added, 2022 - 02 - 21 22: 30: 43, "Delhi ", 58105, Mukul Enterprises, "Kirloskar Jalraj-1 Ultra 1HP Centrifugal Pump with 1 Year Warranty, Total Head: 100 ft", null, 1
+        MSN2QGT6G01HIP, 23363, 128155, SUPPLIER_RETURN, 26,, 52,,, 0, 0, Supplier Vmi Inventory deducted Remark, 2022 - 02 - 21 22: 37: 59, "Delhi ", 58105, Mukul Enterprises, "Kirloskar Jalraj-1 Ultra 1HP Centrifugal Pump with 1 Year Warranty, Total Head: 100 ft", null, 0
+        MSN2QGT6G01HIP, 23347, 128156, ORDER_PLACED,, 26, 26,,, 0, 23363, Vmi inventory deducted, 2022 - 02 - 21 22: 37: 59, "Delhi ", 58105, Mukul Enterprises, "Kirloskar Jalraj-1 Ultra 1HP Centrifugal Pump with 1 Year Warranty, Total Head: 100 ft", null, 0`)
+        console.log("DATA DOWNLOADED==>", res)
+
+    }).catch((err) => {
+        console.log("ERROR OCCURED", err.message)
+    })
+}
+
+
+
 
 //promise take function as an argument
 /*
