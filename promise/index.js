@@ -1,6 +1,6 @@
 function register() {
     let data = { "name": "User103", "email": "user103@gmail.com", "password": "user", "phoneNumber": 1234568880 }
-    saveData(data).then((responseData) => {
+    saveData().then((responseData) => {
         console.log("Promise fulfilled===>", responseData)
     }).catch((error) => {
         console.log("Promise unfullfiled==>", error.message)
@@ -12,19 +12,25 @@ function register() {
 //Generic function which return promise
 //promise will get fulfilled =>  Data has been saved successfully in the database. ==> resolved
 //promise will not get fulfilled => Date failed to save in database    ==> rejected 
-function saveData(data) {
+function saveData() {
     return new Promise(async (resolve, reject) => {
         try {
-            const response = await fetch("https://expense-tracker-service.herokuapp.com/api/v1/user/register", {
+            const response = await fetch("https://dev-servimate-admin.herokuapp.com/dev/api/v1/config/referAndEarn", {
                 method: "POST",
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMzVlZWUxZjUyMmFhY2ZhNThkYmQ1YyIsIm5hbWUiOiJBZG1pbiAxMDEiLCJlbWFpbCI6ImFkbWluMTAxQGdtYWlsLmNvbSIsImlhdCI6MTY2NTExOTA0MSwiZXhwIjoxNjY1MTI2MjQxfQ._kv_dSzb8OSSkLOt06QgdWA6Z15t8IwdvC2rl2qt124'
                 },
-                body: JSON.stringify(data)
+                body: JSON.stringify({
+                    "startDate": "2022-10-04",
+                    "endDate": "2022-10-06",
+                    "discountType": "PERCENTAGE"
+                })
             })
             resolve(response);
         }
         catch (error) {
+            console.log("IN A CATCH BLOCK==========>", error)
             reject(error)
         }
     })
