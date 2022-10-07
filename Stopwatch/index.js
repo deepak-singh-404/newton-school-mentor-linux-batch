@@ -53,3 +53,5 @@ stopBtn.addEventListener('click', () => {
 resetBtn.addEventListener('click', () => {
     counter = -1
 })
+
+//DONE
