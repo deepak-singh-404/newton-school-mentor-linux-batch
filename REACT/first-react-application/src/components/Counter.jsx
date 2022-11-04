@@ -24,6 +24,7 @@ const Counter = () => {
     */
 
     return (<div>
+        <h1>FUNCTIONAL BASED COMPONENT</h1>
         <h1>{count} </h1>
         <button onClick={substractHelper}>Substract</button>
         <button onClick={addHelper}>Add</button>

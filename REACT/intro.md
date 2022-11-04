@@ -18,3 +18,22 @@ Function name === File Name (comes under good practice)
 Not forget to export function
 
 function shoudl return <div> tag
+
+
+React? Library
+Why we are using react?   HTML,CSS, DOM
+
+
+npx create-react-app <app-name>
+
+package.json ? ===>  
+
+node_modules
+
+src  app.css
+     app.js       js + html
+
+
+FileName/Component Name => Should start with the capital letter
+
+and the function name shpuld be as same as the file name
