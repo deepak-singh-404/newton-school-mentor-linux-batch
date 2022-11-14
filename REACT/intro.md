@@ -50,3 +50,45 @@ Agenda
   Login Form (email, password) eye
 
   Register Form
+
+
+
+
+Component
+Why do we need component?
+which one is the root file?
+
+props
+
+useState hook
+why do we need state in component?
+
+Login form.
+
+
+PARENT COMPONENT
+
+CHILD COMPONENT
+
+
+SPA (SINGLE PAGE APPLICATION)
+
+
+Component ==> state
+
+
+OBJECT  -> it will consit some property
+
+TABLE  => 4lgs,
+
+CAR   => 1 steering, 4 wheel
+
+
+child => to parent  => not possible
+
+
+parent => to child
+
+
+through props => we transfer state from one componet to other component
+

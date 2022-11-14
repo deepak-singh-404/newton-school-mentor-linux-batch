@@ -20,8 +20,6 @@ const LoginForm = () => {
         }))
     }
 
-
-
     return (
         <div>
             <h1>LOGIN FORM</h1>
