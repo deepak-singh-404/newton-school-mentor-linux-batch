@@ -72,3 +72,39 @@ FLOW============>
 
 
 
+
+LIFE CYCLE
+
+3
+
+
+
+
+
+Case1:
+ Do something if page render for the very first time.
+useEffect(()=>{
+
+},[])
+
+Case 2:
+ Do something if (something will get changed) kind of dependency.
+ useEffect(()=>{
+
+},[yuvraj, rajesh])
+
+
+<!-- Case 3:
+ Do something if page redirect to another page. => DATA CLEANING
+ useEffect(()=>{
+
+ },)   -->
+
+
+
+Real Use case:
+
+https://servimate.netlify.app/booking/new
+
+
+
