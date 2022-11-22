@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ParentComponent from "./component/ParentComponent/ParentComponent";
 import LifeCycle from "./component/LifeCycle/LifeCycle";
+import Toggle from "./component/Toggle/Toggle";
 
 
 const App = () => {
@@ -12,7 +13,8 @@ const App = () => {
 
   return (<>
     {/* <ParentComponent /> */}
-    <LifeCycle />
+    {/* <LifeCycle /> */}
+    <Toggle />
   </>)
 }
 
