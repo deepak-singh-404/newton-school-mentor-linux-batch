@@ -8,7 +8,7 @@ const makeNetworkRequest = (q) => {
         try {
             const { data } = await axios({
                 "method": 'Get',
-                "url": `localhost:3456/dev/api/v1/search/services/all?search=${q}`
+                "url": `https://api.servimate.in/customer/dev/api/v1/search/services/all?search=${q}`
             })
             resolve(data)
         }
@@ -16,7 +16,6 @@ const makeNetworkRequest = (q) => {
             reject(err)
         }
     })
-
 }
 
 const Search = () => {
@@ -26,9 +25,10 @@ const Search = () => {
 
     const clickHandler = (e) => {
         setInput(e.target.value)
-        if (input.length > 0) {
+        if (e.target.value.length > 0) {
             setLoader(true)
-            makeNetworkRequest(input).then((d) => {
+
+            makeNetworkRequest(e.target.value).then((d) => {
                 setLoader(false)
                 console.log(d.response)
                 setData(d.response)
@@ -45,12 +45,12 @@ const Search = () => {
         {/* {data.map((d) => {
             <h1>{d.item.serviceName || d.item.name}</h1>
         })} */}
-        {data.length !== 0 ? data.map((d) =>
+        {/* {data.length !== 0 ? data.map((d) =>
             <h1>
                 {d.serviceName}
 
             </h1>
-        ) : null}
+        ) : null} */}
     </div>)
 }
 
