@@ -1,0 +1,22 @@
+mongo --version  //To check version
+mongosh  // To open mongo shell
+mongodb atlas       //  To save data over clouse
+mongodb compass     // GUI 
+27017  //mongodb default port
+
+show dbs;    // Show all the database
+
+
+nodejs + express
+
+
+mongodb  
+
+
+nodejs + mongodb >
+
+expreess + mongodb +
+
+express + mongoose => mongodb
+
+mongoose => package 
